@@ -1,0 +1,50 @@
+@import "placeholders";
+
+body{
+	margin:5px;
+	font-family: Arial;
+	font-weight: bold;
+}
+
+nav{
+	width: 100%;
+	height: auto;
+	display: inline-block;
+	border-style: solid;
+
+	.brand{
+		width: 30%;
+		float: left;
+
+		p{
+			margin: 10px;
+		    padding: 0;   
+		 }
+	}
+
+	.links{
+		width: 70%;		
+		float: left;
+		ul{
+			list-style: none;
+			margin: 10px;
+			padding: 0;
+			float: right;
+			li{
+				float: left;				
+				a{
+					text-decoration: none;
+					font-size: 12px;
+					padding: 13px 20px 11px 20px;			
+
+				}
+				a:hover{
+					@extend %hover;
+				}
+
+				
+			}
+		}
+	}
+}
+

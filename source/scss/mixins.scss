@@ -1,0 +1,35 @@
+/* Mixin responsavel por estilizar
+os temas */
+@mixin theme ($bg, $text_color, $border){	
+	background-color: $bg;
+	color: $text_color;
+	border-color: $border;
+	.links{
+		ul{
+			li{
+				a{
+					color: $text_color;
+				}
+				a:hover{
+					background-color: $border;
+				}
+			}
+		}
+	}
+}
+
+/*Variável "tema" define qual tema estará ativado
+1, 2 ou 3*/
+$tema:1;
+
+nav{
+	@if($tema==1){
+	@include theme(#F96D00, #F2F2F2, #222831)
+	}
+	@if($tema==2){
+	@include theme(#3B0944, #F1BBD5, #A12559)
+	}
+	@if($tema==3){
+	@include theme(#F1F6F5, #6088BB, #12CC94)
+	}
+}
